@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "main-page",
@@ -16,17 +17,17 @@
           "name": "Title",
           "settings": {
             "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "100%",
+            "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
+            "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -37,15 +38,60 @@
           },
           "blocks": {}
         },
-        "page-content": {
-          "type": "page-content",
-          "settings": {},
+        "image_XB9CcE": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/HOW_WINNER_IS_CHOSEN.webp",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_KJrAKt": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p><strong>NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING.</strong></p><ol><li>SPONSOR</li></ol><p>The PFP Sports – Justin Gaethje Signed UFC 300 Gloves Giveaway (the “Promotion”) is sponsored by 7th St. Retail, 601 E 7th St, Austin, TX 78701 (“Sponsor”).</p><p>2. ELIGIBILITY</p><p>Open only to legal residents of the State of Texas who are eighteen (18) years of age or older at the time of entry. This Promotion is not available outside Texas, including Canada. Void where prohibited. Employees, officers, directors, and immediate family members of Sponsor are not eligible.</p><p>3. AGREEMENT TO OFFICIAL RULES</p><p>Participation constitutes full and unconditional agreement to these Official Rules and Sponsor’s decisions, which are final and binding.</p><p>4. PROMOTION PERIOD</p><p>The Promotion begins December 25, 2025 at 12:00 a.m. ET and ends January 24, 2026 at 12:00 p.m. ET. Sponsor’s systems are the official time-keeping devices.</p><p>5. HOW TO ENTER</p><p><strong>A. Purchase Entry:</strong> Eligible entrants receive entries with qualifying purchases of Justin Gaethje merchandise via Sponsor’s Shopify storefront. Entries are issued based on the pre-tax purchase amount, excluding shipping, handling, discounts, refunds, or returns. Purchases do not increase odds.</p><p><strong>B. Free Mail-In Entry:</strong> Hand-print full name, mailing address, email, phone number, and date of birth on a 3”x 5” card and mail in a stamped #10 envelope to: PFP Sports – Gaethje Giveaway Entry, 601 E 7th St, Austin, TX 78701. Postmarked by January 24, 2026 and received by January 31, 2026. Limit one (1) entry per envelope.</p><p>6. PRIZEOne (1) winner will receive one (1) pair of authentic Justin Gaethje signed UFC 300 gloves. Approximate Retail Value (“ARV”): $599.98 USD. Prize awarded AS IS with no warranties.</p><p>7. WINNER SELECTION & ODDS</p><p>Winner selected in a random drawing after Promotion Period. Odds depend on number of eligible entries.</p><p>8. WINNER NOTIFICATION</p><p>Winner will be notified by email and must respond within forty-eight (48) hours or may be disqualified.</p><p>9. TAXES</p><p>Winner is responsible for all applicable federal, state, and local taxes.</p><p>10. FRAUD & DISQUALIFICATION</p><p>Any attempt to manipulate or abuse the Promotion, including return-based entry gaming, results in disqualification.</p><p>11. RELEASE & LIMITATION OF LIABILITY</p><p>Entrants release Sponsor from liability arising from participation or prize use, to the fullest extent permitted by law.</p><p>12. PUBLICITY</p><p>Winner grants Sponsor permission to use name, likeness, city, and state for promotional purposes without additional compensation, where lawful.</p><p>13. REGULATORY & STATE DISCLOSURES</p><p>Texas-only promotion. Not subject to NY, FL, or RI registration or bonding requirements.</p><p>14. PRIVACY</p><p>Information collected is used solely for administering the Promotion and in accordance with Sponsor’s Shopify-hosted privacy policy.</p><p>15. WINNER LIST</p><p>To request the winner’s name, send a self-addressed stamped envelope to Sponsor at the address above within sixty (60) days of Promotion end.</p><p>16. GOVERNING LAW</p><p>Governed by the laws of the State of Texas, without conflict-of-law principles.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
           "blocks": {}
         }
       },
       "block_order": [
         "heading",
-        "page-content"
+        "image_XB9CcE",
+        "text_KJrAKt"
       ],
       "settings": {
         "content_direction": "column",
