@@ -23,22 +23,27 @@
     margin-top: 8px;
   }
   
-  /* When inside price container or adjacent to price block, adjust styling */
-  .product-price-wrapper + .product-metafields-entries,
-  .product-price-container ~ .product-metafields-entries,
-  product-price ~ .product-metafields-entries {
+  /* When adjacent to price container, position inline */
+  .product-price-container + .product-metafields-entries {
     margin-top: 0;
     width: auto;
     flex-shrink: 0;
+    float: inline-end;
   }
 
-  /* Make parent container flex when price and metafields are siblings */
-  .group-block:has(product-price):has(+ .product-metafields-entries),
-  .group-block:has(.product-price-container):has(+ .product-metafields-entries) {
+  /* When inside a group with price, make group flex */
+  .group-block:has(.product-price-container):has(+ * .product-metafields-entries),
+  .group-block:has(.product-price-container) + *:has(.product-metafields-entries) {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     gap: 12px;
+  }
+
+  /* Ensure price container and metafields are inline when adjacent blocks */
+  .product-price-container:has(+ .product-metafields-entries) {
+    display: inline-flex;
+    width: auto;
   }
   
   .product-metafields-entries .entries {

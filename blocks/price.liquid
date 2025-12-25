@@ -37,7 +37,7 @@
 %}
 
 <div class="product-price-container">
-  <div class="no-js-hidden product-price-wrapper">
+  <div class="no-js-hidden" id="price-{{ block.id }}">
     <product-price
       class="text-block {{ text_block_classes }} text-{{ block_settings.alignment }} {{ block_settings.type_preset | default: 'paragraph' }} spacing-style"
       data-block-id="{{ block.id }}"
@@ -121,37 +121,44 @@
   /* Product price container styling to match eighty80 structure */
   .product-price-container {
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 12px;
   }
 
-  .product-price-wrapper {
+  .product-price-wrapper,
+  .no-js-hidden {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
     align-items: center;
     gap: 12px;
-    flex: 1;
+    width: 100%;
   }
 
-  /* When metafields entries block comes after price, position it inline */
-  .product-price-container ~ .product-metafields-entries,
-  .product-price-wrapper ~ .product-metafields-entries {
+  /* When metafields entries block comes after price block, include it in the flex container */
+  .product-price-container + .product-metafields-entries {
     margin-top: 0;
-    flex-shrink: 0;
+    margin-left: auto;
   }
 
-  /* Ensure price and metafields are on same row when in same container */
-  .product-price-container:has(+ .product-metafields-entries),
-  .product-price-container:has(~ .product-metafields-entries) {
-    flex-wrap: nowrap;
+  /* Make the price container flex when metafields follows */
+  .product-price-container:has(+ .product-metafields-entries) .no-js-hidden {
+    display: flex;
+    flex-wrap: nowrap !important;
   }
 
+  /* Ensure price span doesn't wrap */
+  .product-price-container .price {
+    flex-wrap: nowrap !important;
+  }
+
+  /* Mobile: stack only on very small screens */
   @media (max-width: 345px) {
-    .product-price-container,
-    .product-price-wrapper {
-      flex-wrap: wrap;
+    .product-price-wrapper,
+    .no-js-hidden {
+      display: block;
+    }
+    
+    .product-price-container + .product-metafields-entries {
+      margin-left: 0;
+      margin-top: 8px;
     }
   }
 {% endstylesheet %}
