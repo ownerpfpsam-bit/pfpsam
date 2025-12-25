@@ -1,0 +1,98 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>PFP Sports – Justin Gaethje Signed UFC 300 Gloves Giveaway<br><span style=\"font-size: 0.7em; font-weight: normal;\">Official Rules</span></h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "winner-image": {
+          "type": "image",
+          "settings": {
+            "image": "",
+            "image_alt": "How the winner is chosen - 3 step process",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "rules-content": {
+          "type": "text",
+          "settings": {
+            "text": "<div style=\"max-width: 800px; margin: 0 auto; line-height: 1.8;\"><p><strong>NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING.</strong></p><h2>1. SPONSOR</h2><p>The PFP Sports – Justin Gaethje Signed UFC 300 Gloves Giveaway (the \"Promotion\") is sponsored by 7th St. Retail, 601 E 7th St, Austin, TX 78701 (\"Sponsor\").</p><h2>2. ELIGIBILITY</h2><p>Open only to legal residents of the State of Texas who are eighteen (18) years of age or older at the time of entry. This Promotion is not available outside Texas, including Canada. Void where prohibited. Employees, officers, directors, and immediate family members of Sponsor are not eligible.</p><h2>3. AGREEMENT TO OFFICIAL RULES</h2><p>Participation constitutes full and unconditional agreement to these Official Rules and Sponsor's decisions, which are final and binding.</p><h2>4. PROMOTION PERIOD</h2><p>The Promotion begins December 25, 2025 at 12:00 a.m. ET and ends January 24, 2026 at 12:00 p.m. ET. Sponsor's systems are the official time-keeping devices.</p><h2>5. HOW TO ENTER</h2><p><strong>A. Purchase Entry:</strong> Eligible entrants receive entries with qualifying purchases of Justin Gaethje merchandise via Sponsor's Shopify storefront. Entries are issued based on the pre-tax purchase amount, excluding shipping, handling, discounts, refunds, or returns. Purchases do not increase odds.</p><p><strong>B. Free Mail-In Entry:</strong> Hand-print full name, mailing address, email, phone number, and date of birth on a 3\" x 5\" card and mail in a stamped #10 envelope to: PFP Sports – Gaethje Giveaway Entry, 601 E 7th St, Austin, TX 78701. Postmarked by January 24, 2026 and received by January 31, 2026. Limit one (1) entry per envelope.</p><h2>6. PRIZE</h2><p>One (1) winner will receive one (1) pair of authentic Justin Gaethje signed UFC 300 gloves. Approximate Retail Value (\"ARV\"): $599.98 USD. Prize awarded AS IS with no warranties.</p><h2>7. WINNER SELECTION &amp; ODDS</h2><p>Winner selected in a random drawing after Promotion Period. Odds depend on number of eligible entries.</p><h2>8. WINNER NOTIFICATION</h2><p>Winner will be notified by email and must respond within forty-eight (48) hours or may be disqualified.</p><h2>9. TAXES</h2><p>Winner is responsible for all applicable federal, state, and local taxes.</p><h2>10. FRAUD &amp; DISQUALIFICATION</h2><p>Any attempt to manipulate or abuse the Promotion, including return-based entry gaming, results in disqualification.</p><h2>11. RELEASE &amp; LIMITATION OF LIABILITY</h2><p>Entrants release Sponsor from liability arising from participation or prize use, to the fullest extent permitted by law.</p><h2>12. PUBLICITY</h2><p>Winner grants Sponsor permission to use name, likeness, city, and state for promotional purposes without additional compensation, where lawful.</p><h2>13. REGULATORY &amp; STATE DISCLOSURES</h2><p>Texas-only promotion. Not subject to NY, FL, or RI registration or bonding requirements.</p><h2>14. PRIVACY</h2><p>Information collected is used solely for administering the Promotion and in accordance with Sponsor's Shopify-hosted privacy policy.</p><h2>15. WINNER LIST</h2><p>To request the winner's name, send a self-addressed stamped envelope to Sponsor at the address above within sixty (60) days of Promotion end.</p><h2>16. GOVERNING LAW</h2><p>Governed by the laws of the State of Texas, without conflict-of-law principles.</p><p style=\"margin-top: 32px; padding-top: 24px; border-top: 1px solid #e0e0e0; color: #666; font-size: 0.9em;\"><em>* WE WILL NEVER CONTACT THE WINNER ASKING FOR PAYMENT OF ANY KIND</em></p></div>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 16,
+            "padding-inline-end": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "winner-image",
+        "rules-content"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 24,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+
