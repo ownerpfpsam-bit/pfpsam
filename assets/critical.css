@@ -118,10 +118,13 @@ body {
 
 /* Product Metafields Entries Styles */
 .product-metafields-entries {
+  font-size: 12px;
+  font-weight: 900;
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .product-metafields-entries .entries {
@@ -136,8 +139,10 @@ body {
 }
 
 .entries_meta_cl {
-  font-size: 0.9em;
-  font-weight: 500;
+  font-style: italic;
+  line-height: 25px;
+  font-weight: 900;
+  padding-right: 15px;
 }
 
 .product-entry-badge {
