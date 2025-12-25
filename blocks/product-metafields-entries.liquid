@@ -53,31 +53,37 @@
 
 {% schema %}
 {
-  "name": "Product entries & badge",
+  "name": "t:names.product_entries_badge",
   "settings": [
     {
       "type": "header",
-      "content": "Appearance"
+      "content": "t:content.appearance"
     },
     {
       "type": "select",
       "id": "alignment",
-      "label": "Alignment",
+      "label": "t:settings.alignment",
       "options": [
         {
           "value": "left",
-          "label": "Left"
+          "label": "t:options.left"
         },
         {
           "value": "center",
-          "label": "Center"
+          "label": "t:options.center"
         },
         {
           "value": "right",
-          "label": "Right"
+          "label": "t:options.right"
         }
       ],
       "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_entries_badge",
+      "category": "t:categories.product"
     }
   ]
 }
