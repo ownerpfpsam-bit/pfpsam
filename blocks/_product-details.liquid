@@ -24,7 +24,9 @@
       </a>
     </div>
     {% content_for 'blocks' %}
-    {% render 'product-metafields-entries', product: closest.product %}
+    {% if closest.product %}
+      {% render 'product-metafields-entries', product: closest.product %}
+    {% endif %}
   {% endcapture %}
 
   {% render 'group', children: children, settings: block_settings, shopify_attributes: block.shopify_attributes %}
