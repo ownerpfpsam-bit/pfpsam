@@ -115,3 +115,37 @@ body {
 .shopify-section > .full-width {
   grid-column: 1 / -1;
 }
+
+/* Product Metafields Entries Styles */
+.product-metafields-entries {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.product-metafields-entries .entries {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-item-icon {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.entries_meta_cl {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.product-entry-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+  background: linear-gradient(180deg, rgba(192, 2, 255, 1), rgba(255, 59, 184, 1) 100%) !important;
+  color: #ffffff !important;
+}
