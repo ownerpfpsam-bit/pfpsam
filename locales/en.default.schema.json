@@ -1172,6 +1172,19 @@
     "x_position": "Horizontal position",
     "y_position": "Vertical position"
   },
+  "general": {
+    "product": "Product",
+    "search": "Search",
+    "page": "Page",
+    "custom_section": "Custom section",
+    "collections_grid": "Collections grid",
+    "collection": "Collection",
+    "cart": "Cart",
+    "blog": "Blog",
+    "article": "Article",
+    "404": "404",
+    "footer": "Footer"
+  },
   "text_defaults": {
     "accordion_heading": "Accordion heading",
     "are_purchases_final_sale": "Are any purchases final sale?",
