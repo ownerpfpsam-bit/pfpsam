@@ -1,0 +1,85 @@
+{% comment %}
+  Product Metafields Entries Block
+  
+  Displays product entries count and badge multiplier
+  Can be inserted anywhere in product details or product cards
+{% endcomment %}
+
+{%- liquid
+  assign block_settings = block.settings
+  assign product_resource = closest.product | default: product
+-%}
+
+{% render 'product-metafields-entries', product: product_resource %}
+
+{% stylesheet %}
+  .product-metafields-entries {
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .product-metafields-entries .entries {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .product-item-icon {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+  
+  .entries_meta_cl {
+    font-style: italic;
+    line-height: 25px;
+    font-weight: 900;
+  }
+  
+  .product-entry-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+    white-space: nowrap;
+    background: linear-gradient(180deg, rgba(192, 2, 255, 1), rgba(255, 59, 184, 1) 100%) !important;
+    color: #ffffff !important;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product entries & badge",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    }
+  ]
+}
+{% endschema %}
+
