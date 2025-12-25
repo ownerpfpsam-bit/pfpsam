@@ -155,7 +155,7 @@ body {
   color: #ffffff !important;
 }
 
-/* Match eighty80 structure - price and metafields on same row */
+/* Ensure price and metafields entries appear on same row - match eighty80 structure */
 .product-price-container .no-js-hidden {
   display: flex !important;
   flex-wrap: nowrap !important;
@@ -168,49 +168,50 @@ body {
   flex-wrap: nowrap !important;
 }
 
-/* Make the group-block-content flex when it has price followed by metafields */
-.group-block-content:has(.product-price-container) {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+/* When metafields block follows price block, position it to appear inline */
+.product-price-container + * .product-metafields-entries,
+.product-price-container ~ * .product-metafields-entries {
+  margin-top: 0;
 }
 
-/* When metafields block immediately follows price block, make them inline */
+/* Use CSS to make adjacent blocks appear inline */
 .group-block-content > *:has(.product-price-container) + *:has(.product-metafields-entries) {
-  margin-top: 0 !important;
-  margin-left: calc(-100% + 100%);
+  margin-top: 0;
+  margin-left: -100%;
   width: auto;
-  flex: 0 0 auto;
+  display: inline-block;
 }
 
-/* Better: make price container and next sibling appear inline */
-.group-block-content > *:has(.product-price-container) {
-  flex: 1 1 auto;
-  min-width: 0;
+/* Better approach: make the container flex when it has both blocks */
+.group-block-content:has(.product-price-container):has(+ * .product-metafields-entries),
+.group-block-content:has(.product-price-container) + *:has(.product-metafields-entries) {
+  display: contents;
 }
 
-.group-block-content > *:has(.product-price-container) + *:has(.product-metafields-entries) {
-  flex: 0 0 auto;
-  margin-left: 12px;
-  margin-top: 0 !important;
+/* Actually, let's use a simpler approach - make the no-js-hidden extend to include next sibling */
+.product-price-container:has(+ * .product-metafields-entries) .no-js-hidden {
+  display: flex !important;
+  flex-wrap: nowrap !important;
 }
 
-/* Ensure metafields inside doesn't break layout */
-.product-metafields-entries {
-  width: auto !important;
+/* Position metafields to appear inside the no-js-hidden visually */
+.product-price-container + * .product-metafields-entries {
+  position: relative;
+  margin-top: 0;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
-/* Mobile: stack only on very small screens like eighty80 (345px) */
+/* Mobile: stack only on very small screens like eighty80 */
 @media (max-width: 345px) {
   .product-price-container .no-js-hidden {
     display: block !important;
   }
   
-  .group-block-content > *:has(.product-price-container) + *:has(.product-metafields-entries) {
+  .product-price-container + * .product-metafields-entries {
     margin-left: 0;
-    margin-top: 8px !important;
+    margin-top: 8px;
     width: 100%;
-    flex: 1 1 100%;
   }
 }
 

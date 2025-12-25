@@ -17,15 +17,7 @@
         "footer_copyright_RanhxB": {
           "type": "footer-copyright",
           "settings": {
-            "show_powered_by": true,
-            "font_size": "0.75rem",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "footer_policy_list_iyHPDt": {
-          "type": "footer-policy-list",
-          "settings": {
+            "show_powered_by": false,
             "font_size": "0.75rem",
             "case": "none"
           },
@@ -49,12 +41,32 @@
             "custom_url": ""
           },
           "blocks": {}
+        },
+        "footer_policy_list_Ez8Vk7": {
+          "type": "footer-policy-list",
+          "name": "t:names.policy_list",
+          "settings": {
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        },
+        "footer_disclaimer_L68f4j": {
+          "type": "footer-disclaimer",
+          "name": "t:names.disclaimer",
+          "settings": {
+            "disclaimer_text": "* NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. Open to legal residents of the 50 United States, the District of Columbia and Canada. Void in Puerto Rico and US territories and where prohibited by law. Odds of winning depend upon the number of eligible purchase and non-purchase entries received.",
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "footer_copyright_RanhxB",
-        "footer_policy_list_iyHPDt",
-        "social_links_yeJXtE"
+        "social_links_yeJXtE",
+        "footer_policy_list_Ez8Vk7",
+        "footer_disclaimer_L68f4j"
       ],
       "name": "t:names.policies_and_links",
       "settings": {
