@@ -23,6 +23,13 @@
     margin-top: 8px;
   }
   
+  /* When inside price container, adjust styling */
+  .product-price-wrapper + .product-metafields-entries,
+  .product-price-container ~ .product-metafields-entries {
+    margin-top: 0;
+    float: inline-end;
+  }
+  
   .product-metafields-entries .entries {
     display: flex;
     align-items: center;
@@ -38,6 +45,7 @@
     font-style: italic;
     line-height: 25px;
     font-weight: 900;
+    padding-right: 15px;
   }
   
   .product-entry-badge {
@@ -46,8 +54,24 @@
     font-size: 0.85em;
     font-weight: 600;
     white-space: nowrap;
+    height: fit-content !important;
     background: linear-gradient(180deg, rgba(192, 2, 255, 1), rgba(255, 59, 184, 1) 100%) !important;
     color: #ffffff !important;
+  }
+
+  /* Ensure price container flex layout works */
+  .product-price-container .product-price-wrapper {
+    flex-wrap: nowrap !important;
+  }
+
+  .product-price-container .no-js-hidden {
+    display: flex;
+  }
+
+  @media (max-width: 345px) {
+    .product-price-container .no-js-hidden {
+      display: block;
+    }
   }
 {% endstylesheet %}
 

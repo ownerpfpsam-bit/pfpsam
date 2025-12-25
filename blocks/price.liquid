@@ -36,22 +36,24 @@
   endcapture
 %}
 
-<product-price
-  class="text-block {{ text_block_classes }} text-{{ block_settings.alignment }} {{ block_settings.type_preset | default: 'paragraph' }} spacing-style"
-  data-block-id="{{ block.id }}"
-  data-product-id="{{ product_resource.id }}"
-  style="
-    {% render 'typography-style', settings: block_settings %}
-    {% render 'spacing-style', settings: block_settings %}
-    --width: {{ block_settings.width }};
-  "
-  {{ block.shopify_attributes }}
->
-  {% render 'price',
-    show_unit_price: true,
-    product_resource: product_resource,
-    show_sale_price_first: block_settings.show_sale_price_first
-  %}
+<div class="product-price-container">
+  <div class="no-js-hidden product-price-wrapper">
+    <product-price
+      class="text-block {{ text_block_classes }} text-{{ block_settings.alignment }} {{ block_settings.type_preset | default: 'paragraph' }} spacing-style"
+      data-block-id="{{ block.id }}"
+      data-product-id="{{ product_resource.id }}"
+      style="
+        {% render 'typography-style', settings: block_settings %}
+        {% render 'spacing-style', settings: block_settings %}
+        --width: {{ block_settings.width }};
+      "
+      {{ block.shopify_attributes }}
+    >
+      {% render 'price',
+        show_unit_price: true,
+        product_resource: product_resource,
+        show_sale_price_first: block_settings.show_sale_price_first
+      %}
 
   {% if block_settings.show_tax_info %}
     <div class="tax-note">
@@ -82,7 +84,9 @@
       {%- endform -%}
     </div>
   {%- endif -%}
-</product-price>
+    </product-price>
+  </div>
+</div>
 
 {% # theme-check-disable %}
 {% stylesheet %}
@@ -112,6 +116,35 @@
     letter-spacing: normal;
     text-transform: none;
     color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+  }
+
+  /* Product price container styling to match eighty80 structure */
+  .product-price-container {
+    width: 100%;
+  }
+
+  .product-price-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* When metafields entries block comes after price, position it inline */
+  .product-price-container + .product-metafields-entries,
+  .product-price-wrapper + .product-metafields-entries {
+    margin-top: 0;
+  }
+
+  /* Make price wrapper flex when metafields is present */
+  .product-price-wrapper:has(+ .product-metafields-entries) {
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: 345px) {
+    .product-price-wrapper {
+      display: block;
+    }
   }
 {% endstylesheet %}
 
