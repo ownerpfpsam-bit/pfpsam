@@ -1,0 +1,22 @@
+{% comment %}
+  Product Metafields Entries Display
+  
+  Displays product entries count and badge multiplier
+  Usage: {% render 'product-metafields-entries', product: product %}
+{% endcomment %}
+
+{% liquid
+  assign entries_count = product.metafields.custom.entries.value | default: product.metafields.custom.entries | default: '8,880'
+  assign badge_value = product.metafields.custom.badge_multiplier.value | default: product.metafields.custom.badge_multiplier | default: '120'
+%}
+
+<div class="product-metafields-entries">
+  <span class="entries">
+    <span class="product-item-icon">🎟</span>
+    <span class="entries_meta_cl">{{ entries_count }} Entries</span>
+  </span>
+  <div class="product-entry-badge" style="background: linear-gradient(180deg, rgba(192, 2, 255, 1), rgba(255, 59, 184, 1) 100%) !important; color: #ffffff !important;">
+    {{ badge_value }}x
+  </div>
+</div>
+
