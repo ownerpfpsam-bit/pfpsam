@@ -154,3 +154,39 @@ body {
   background: linear-gradient(180deg, rgba(192, 2, 255, 1), rgba(255, 59, 184, 1) 100%) !important;
   color: #ffffff !important;
 }
+
+/* Ensure price and metafields entries appear on same row */
+.group-block:has(product-price):has(+ * .product-metafields-entries),
+.group-block:has(.product-price-container):has(+ * .product-metafields-entries) {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+}
+
+/* When metafields block follows price block directly */
+product-price + .product-metafields-entries,
+.product-price-container + .product-metafields-entries {
+  margin-top: 0;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* Variant picker - keep all sizes in one row */
+.variant-option--buttons {
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+}
+
+.variant-option--buttons::-webkit-scrollbar {
+  height: 4px;
+}
+
+.variant-option--buttons::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.variant-option--buttons::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}

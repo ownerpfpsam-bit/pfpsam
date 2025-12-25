@@ -121,6 +121,10 @@
   /* Product price container styling to match eighty80 structure */
   .product-price-container {
     width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
   }
 
   .product-price-wrapper {
@@ -128,22 +132,26 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 12px;
+    flex: 1;
   }
 
   /* When metafields entries block comes after price, position it inline */
-  .product-price-container + .product-metafields-entries,
-  .product-price-wrapper + .product-metafields-entries {
+  .product-price-container ~ .product-metafields-entries,
+  .product-price-wrapper ~ .product-metafields-entries {
     margin-top: 0;
+    flex-shrink: 0;
   }
 
-  /* Make price wrapper flex when metafields is present */
-  .product-price-wrapper:has(+ .product-metafields-entries) {
+  /* Ensure price and metafields are on same row when in same container */
+  .product-price-container:has(+ .product-metafields-entries),
+  .product-price-container:has(~ .product-metafields-entries) {
     flex-wrap: nowrap;
   }
 
   @media (max-width: 345px) {
+    .product-price-container,
     .product-price-wrapper {
-      display: block;
+      flex-wrap: wrap;
     }
   }
 {% endstylesheet %}
